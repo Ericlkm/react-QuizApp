@@ -1,0 +1,365 @@
+#body {
+  background-color: black;
+}
+
+.quizBox {
+  background-image: linear-gradient(45deg, white, white);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 45rem;
+  min-height: 30rem;
+  margin: auto;
+  padding: 1rem;
+  padding-inline: 2rem;
+  box-shadow: 0px 0px 10px white;
+  display: none;
+}
+.b {
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+.b:hover {
+  color: rgb(109, 226, 255);
+  background-color: rgba(0, 0, 0, 0.164);
+  padding: 5px;
+}
+
+.quizBox h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  margin: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  margin: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+.title::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.368),
+    rgb(0, 0, 0),
+    rgba(255, 255, 255, 0.368)
+  );
+  z-index: -1;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease-in-out;
+}
+.title:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+.title::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  border-radius: 10px;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.368),
+    rgb(0, 0, 0),
+    rgba(255, 255, 255, 0.368)
+  );
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease-in-out;
+}
+.title:hover::before {
+  transform: scaleX(1);
+  transform-origin: right;
+}
+
+li {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem 5rem 0.5rem 4rem;
+  padding: 0.6rem;
+  border-radius: 5px;
+  font-size: 1.3rem;
+  font-weight: bold;
+
+  background-color: rgba(231, 234, 235, 0.678);
+  transition: all 0.3s ease-in-out;
+}
+li:hover {
+  background-color: rgba(134, 224, 247, 0.973);
+}
+.correct {
+  background-color: rgba(134, 224, 247, 0.973);
+  border: solid 2px rgba(0, 0, 255, 0.212);
+}
+
+.results {
+  background-image: linear-gradient(45deg, cyan, white);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30rem;
+  min-height: 30rem;
+  margin: auto;
+  margin-top: 7rem;
+  padding: 1rem;
+  padding-inline: 2rem;
+  box-shadow: 0px 0px 10px white;
+}
+.results h2 {
+  margin: 3rem;
+}
+/* Info Section Styles */
+.info {
+  display: flex;
+  flex-direction: column;
+  background-color: #f5f5f5;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 50rem;
+  margin: auto;
+  margin-top: 2.5rem;
+  animation: fadeInDown 0.3s ease-in-out;
+}
+
+.info-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 16px;
+}
+
+.info-text {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #666;
+  margin-bottom: 24px;
+}
+
+.info-link {
+  display: inline-block;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.info-link:hover {
+  background-color: #0056b3;
+}
+
+/* Custom Navbar Styles */
+.navbar-custom {
+  background-color: #333;
+  padding: 1rem;
+  transition: background-color 0.5s ease;
+}
+
+.navbar-custom .navbar-brand {
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.navbar-custom .navbar-nav .nav-link {
+  color: #fff;
+  font-size: 1.1rem;
+  padding: 0.5rem 1rem;
+  transition: color 0.3s ease;
+}
+
+.navbar-custom .navbar-nav .nav-link:hover {
+  color: #ff6b6b;
+}
+
+.navbar-custom .dropdown-menu {
+  background-color: #333;
+}
+
+.navbar-custom .dropdown-item {
+  color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-custom .dropdown-item:hover {
+  background-color: #ff6b6b;
+  color: #fff;
+}
+
+/* Logo Animation */
+.logo {
+  height: 40px;
+  animation: logoSpin 5s infinite linear;
+}
+
+@keyframes logoSpin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Navbar Animation on Scroll */
+.navbar-custom.scrolled {
+  background-color: #ff6b6b;
+}
+
+.img {
+  height: 5rem;
+  border-radius: 50%;
+  transition: all 0.6s ease-in-out;
+}
+.img:hover {
+  transform: scale(1.2) rotateZ(360deg);
+}
+.img2 {
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+}
+.img2:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 0px 10px black;
+}
+h3 {
+  color: black;
+}
+
+.line {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 42rem;
+  height: 1px;
+  margin: auto;
+  background-image: linear-gradient(to right, white, black, black, white);
+}
+
+.major-mono-display-regular {
+  font-family: "Major Mono Display", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.rock-salt-regular {
+  font-family: "Rock Salt", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.about-page {
+  background-color: white;
+  margin-top: 5rem;
+  border-radius: 5px;
+  padding: 2.5rem;
+  box-shadow: 0px 0px 10px white;
+  animation: fadeInUp 0.3s ease-in-out;
+}
+.about-page p,
+h1 {
+  font-weight: bolder;
+}
+
+/* General Styles */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+}
+
+/* Header Styles */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  animation: fadeInDown 1s;
+}
+
+/* Contact Form Styles */
+.contact-form {
+  max-width: 600px;
+  margin: 50px auto;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  animation: fadeInUp 1s;
+}
+
+.contact-form h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.form-group textarea {
+  height: 150px;
+}
+
+.btn:hover {
+  background-color: #555;
+}
+
+/* Animation Styles */
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
