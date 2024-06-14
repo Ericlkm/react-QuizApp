@@ -178,41 +178,127 @@ export const QuizGame = {
       answer: "All of the above",
     },
     {
-      question:
-        "What is the recommended technique for administering an intramuscular injection?",
+      question: "What is a higher-order function in functional programming?",
       choices: [
-        "Z-track method",
-        "Air-lock method",
-        "Pinch method",
-        "Aspiration method",
+        "A function that takes one or more functions as arguments and/or returns a function",
+        "A function that performs complex mathematical operations",
+        "A function that modifies the global state",
+        "A function that can only be called once",
       ],
-      answer: "Z-track method",
+      answer:
+        "A function that takes one or more functions as arguments and/or returns a function",
     },
     {
       question:
-        "Which of the following is a common side effect of opioid analgesics?",
-      choices: ["Constipation", "Nausea", "Drowsiness", "All of the above"],
-      answer: "All of the above",
+        "What is the purpose of the 'map' method in functional programming?",
+      choices: [
+        "To create a new array by applying a function to each element of an existing array",
+        "To remove elements from an array that do not meet a certain condition",
+        "To sort the elements of an array in ascending or descending order",
+        "To merge two or more arrays into a single array",
+      ],
+      answer:
+        "To create a new array by applying a function to each element of an existing array",
     },
     {
-      question: "Which of the following is a common symptom of dehydration?",
+      question:
+        "What is the purpose of the 'reduce' method in functional programming?",
       choices: [
-        "Dry mouth and tongue",
-        "Headache",
-        "Dizziness",
+        "To iterate over an array and apply a function to each element, accumulating a single value",
+        "To create a new array by removing elements that do not meet a certain condition",
+        "To sort the elements of an array in ascending or descending order",
+        "To merge two or more arrays into a single array",
+      ],
+      answer:
+        "To iterate over an array and apply a function to each element, accumulating a single value",
+    },
+    {
+      question: "What is a pure function in functional programming?",
+      choices: [
+        "A function that always returns the same output for the same input and has no side effects",
+        "A function that modifies the global state",
+        "A function that takes one or more functions as arguments",
+        "A function that can only be called once",
+      ],
+      answer:
+        "A function that always returns the same output for the same input and has no side effects",
+    },
+    {
+      question:
+        "What is the purpose of the 'filter' method in functional programming?",
+      choices: [
+        "To create a new array by applying a function to each element of an existing array",
+        "To create a new array containing only the elements that meet a certain condition",
+        "To sort the elements of an array in ascending or descending order",
+        "To merge two or more arrays into a single array",
+      ],
+      answer:
+        "To create a new array containing only the elements that meet a certain condition",
+    },
+    {
+      question:
+        "Which of the following is a potential complication of mechanical ventilation?",
+      choices: [
+        "Ventilator-associated pneumonia",
+        "Barotrauma",
+        "Oxygen toxicity",
         "All of the above",
       ],
       answer: "All of the above",
     },
     {
-      question: "What is the normal range for an adult's blood pressure?",
+      question:
+        "What is the primary goal of wound care for a chronic, non-healing wound?",
       choices: [
-        "90/60 mmHg to 120/80 mmHg",
-        "100/70 mmHg to 140/90 mmHg",
-        "110/80 mmHg to 150/100 mmHg",
-        "120/80 mmHg to 160/110 mmHg",
+        "Promote healing",
+        "Prevent infection",
+        "Manage exudate",
+        "Provide a moist wound environment",
       ],
-      answer: "100/70 mmHg to 140/90 mmHg",
+      answer: "Provide a moist wound environment",
+    },
+    {
+      question:
+        "Which of the following is a potential complication of total parenteral nutrition (TPN)?",
+      choices: [
+        "Catheter-related bloodstream infection",
+        "Metabolic complications",
+        "Liver dysfunction",
+        "All of the above",
+      ],
+      answer: "All of the above",
+    },
+    {
+      question:
+        "Which of the following is a potential complication of prolonged immobility?",
+      choices: [
+        "Pressure ulcers",
+        "Deep vein thrombosis",
+        "Muscle atrophy",
+        "All of the above",
+      ],
+      answer: "All of the above",
+    },
+    {
+      question: "What is the primary goal of palliative care?",
+      choices: [
+        "Cure the underlying disease",
+        "Prolong life at all costs",
+        "Improve quality of life",
+        "Provide aggressive treatment",
+      ],
+      answer: "Improve quality of life",
+    },
+    {
+      question:
+        "Which of the following is a potential complication of long-term use of corticosteroids?",
+      choices: [
+        "Osteoporosis",
+        "Hyperglycemia",
+        "Immunosuppression",
+        "All of the above",
+      ],
+      answer: "All of the above",
     },
   ],
 };
