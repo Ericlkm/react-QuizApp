@@ -125,7 +125,16 @@ function Quiz({ questions }) {
         <div className="results">
           <h1>Results:</h1>
           <div>
-            <h2>Score: {results.score}</h2>
+            <h2>
+              Score:{" "}
+              {results.score === 160 ? (
+                <span className="green">Perfect! {results.score}</span>
+              ) : (
+                results.score
+              )}{" "}
+              / 160
+            </h2>
+
             <h2>Correct Answers: {results.correctAnswers}</h2>
             <h2>Wrong Answers: {results.wrongAnswers}</h2>
           </div>
