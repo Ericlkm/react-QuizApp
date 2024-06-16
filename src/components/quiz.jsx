@@ -30,7 +30,11 @@ function Quiz({ questions }) {
   function restartQuiz() {
     setAnswerInd(null);
     setAnswer(null);
-    setResults(Score);
+    setResults({
+      score: 0,
+      correctAnswers: 0,
+      wrongAnswers: 0,
+    });
     setCurrentQuestion(0);
     setShowResults(false);
   }
@@ -45,7 +49,7 @@ function Quiz({ questions }) {
           }
         : {
             ...prev,
-            score: prev.score - 5,
+            score: prev.score - 2,
             wrongAnswers: prev.wrongAnswers + 1,
           };
     });
@@ -100,15 +104,13 @@ function Quiz({ questions }) {
                   go back
                 </button>{" "}
                 &nbsp;
-                {currentQuestion === questions.length - 1 ? (
-                  <button onClick={onClickNext} className="btn btn-primary">
-                    Finished
-                  </button>
-                ) : (
-                  <button onClick={onClickNext} className="btn btn-primary">
-                    Next
-                  </button>
-                )}
+                <button
+                  onClick={onClickNext}
+                  className="btn btn-primary"
+                  disabled={answerInd === null}
+                >
+                  {currentQuestion !== questions.length - 1 ? "Next" : "Finish"}
+                </button>
               </div>
               <button
                 onClick={restartQuiz}
@@ -122,17 +124,40 @@ function Quiz({ questions }) {
           </div>
         </div>
       ) : (
-        <div className="results">
-          <h1>Results:</h1>
-          <div>
+        <div
+          className="results major-mono-display-regular"
+          style={{ fontWeight: "bolder" }}
+        >
+          <h1 style={{ textAlign: "left" }}>Results:</h1>
+          <div style={{ marginTop: "1.5rem", textAlign: "center" }}>
+            <h1>
+              Total Questions:{" "}
+              <span className="major-mono-display-regular">
+                {questions.length}
+              </span>
+            </h1>
             <h2>
-              Score:{" "}
-              {results.score === 160 ? (
-                <span className="green">Perfect! {results.score}</span>
+              Total Score:{" "}
+              {results.score === questions.length * 5 ? (
+                <span className="green">
+                  {" "}
+                  {results.score}{" "}
+                  <span
+                    style={{
+                      backgroundImage:
+                        "linear-gradient(45deg, lightgreen,cyan,blue,yellow,red,orange)",
+                      color: "transparent",
+                      backgroundClip: "text",
+                    }}
+                  >
+                    <i className="fa-solid fa-trophy"></i>Perfect Score!!!🥇
+                  </span>
+                </span>
               ) : (
                 results.score
               )}{" "}
-              / 160
+              / {questions.length * 5}{" "}
+              <i className="fa-solid fa-ranking-star"></i>
             </h2>
 
             <h2>Correct Answers: {results.correctAnswers}</h2>

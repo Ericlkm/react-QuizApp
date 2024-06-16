@@ -12,6 +12,7 @@ function TakeQuiz() {
     $(".info").slideDown(1000);
     $("#closebtn").hide(1000);
   }
+
   return (
     <>
       <button
