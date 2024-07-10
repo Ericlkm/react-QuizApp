@@ -17,15 +17,6 @@ function Quiz({ questions }) {
       setAnswer(false);
     }
   }
-  function previousQuestion() {
-    setAnswerInd(null);
-    setAnswer(null);
-    if (currentQuestion !== 0) {
-      setCurrentQuestion((prev) => prev - 1);
-    } else {
-      setCurrentQuestion(questions.length - 1);
-    }
-  }
 
   function restartQuiz() {
     setAnswerInd(null);
@@ -97,12 +88,6 @@ function Quiz({ questions }) {
               </ul>
 
               <div className="btn btn-group-toggle">
-                <button
-                  onClick={previousQuestion}
-                  className="btn btn-secondary"
-                >
-                  go back
-                </button>{" "}
                 &nbsp;
                 <button
                   onClick={onClickNext}

@@ -61,10 +61,7 @@ function TakeQuiz() {
             Get ready to put your knowledge to the test with{" "}
             {QuizGame.questions.length} mind-bending questions!
           </p>
-          <p className="info-text">
-            You'll have 10 seconds to rack your brain for each question, so
-            think fast!
-          </p>
+
           <p className="info-text">
             May the odds be ever in your favor! Good luck!
           </p>
