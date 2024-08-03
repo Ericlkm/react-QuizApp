@@ -1,5 +1,5 @@
 # React Quiz App
-[http://ericreactquiz.netlify.app] (Try Quiz here!)
+[http://ericreactquiz.netlify.app] (< click here to Try Quiz now!)
 
 
 The React Quiz App is a web application built with React that allows users to take quizzes on various topics. It provides an interactive and user-friendly interface for answering multiple-choice questions.
